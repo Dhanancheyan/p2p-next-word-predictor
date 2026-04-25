@@ -1,0 +1,47 @@
+# NWP Seed Corpus
+# One sentence per line. Used to pre-warm the n-gram trie on first load.
+# Lines starting with '#' and blank lines are ignored.
+
+the quick brown fox jumps over the lazy dog
+i would like to thank you for your help
+please let me know if you have any questions
+i am writing to follow up on our previous conversation
+thank you for your time and consideration
+i will be happy to assist you with that
+could you please send me the information as soon as possible
+i hope this message finds you well and in good health
+looking forward to hearing from you soon about this matter
+please feel free to reach out if you need anything at all
+i appreciate your prompt response to my previous email
+we are pleased to inform you that your request has been approved
+i would be grateful if you could provide more details
+kindly confirm receipt of this message at your earliest convenience
+i am writing with regard to the meeting scheduled for tomorrow
+federated learning shares model updates between peers
+next word prediction should be fast and practical
+the local model learns from completed sessions
+gossip rounds make peer vocabulary visible quickly
+this peer shared a new word through federated learning
+the hybrid model combines lstm and ngram predictions
+delta sharing reduces payload size and network latency
+the global model aggregates knowledge from all peers
+she said that the weather was really nice today
+he went to the store to buy some groceries
+we need to finish this project before the deadline
+they have been working on this problem for a long time
+the results of the experiment were very interesting
+it is important to maintain good communication with your team
+the new version of the software has many improvements
+please review the attached document and let me know your thoughts
+the conference will be held next week in the main hall
+i think we should consider all the available options carefully
+the data shows a significant increase in performance over time
+could you please check if the server is running correctly
+the deadline for submission is at the end of this month
+we have received several complaints about the recent changes
+the team worked hard to deliver the project on schedule
+i would like to schedule a meeting to discuss this further
+please make sure to save your work before closing the application
+the system automatically backs up your data every hour
+we apologize for any inconvenience this may have caused you
+the updated policy will take effect starting from next month

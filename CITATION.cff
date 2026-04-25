@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+type: software
+title: "P2P Next-Word Predictor"
+abstract: "A privacy-preserving, federated next-word prediction system using hybrid LSTM + n-gram models with peer-to-peer gossip federated learning."
+authors:
+  - family-names: "Dhanancheyan"
+    given-names: ""
+    affiliation: "National Institute of Technology, Tiruchirappalli"
+version: "12.0.0"
+date-released: 2026-04-25
+license: MIT
+repository-code: "https://github.com/Dhanancheyan/p2p-next-word-predictor"

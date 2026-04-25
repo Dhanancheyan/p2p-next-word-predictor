@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nwp_v12"
+version = "12.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "pydantic>=2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nwp_v12*"]
+
+[tool.setuptools.package-data]
+"nwp_v12" = ["Data/**/*", "Frontend/**/*"]

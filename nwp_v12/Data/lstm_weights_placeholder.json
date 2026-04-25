@@ -1,0 +1,8 @@
+{
+  "__placeholder__": true,
+  "format": "torch_state_gzip_b64",
+  "arch": "word_lstm_v1",
+  "train_steps": 0,
+  "blob": null,
+  "note": "Replace this file with a real weights export produced by the training notebook (NWP_Training_Notebook.ipynb). The file must contain 'arch', 'train_steps', and 'blob' fields. Upload via the DL Tuning tab in the web UI, or call POST /local/model/upload_weights directly."
+}

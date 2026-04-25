@@ -1,0 +1,15 @@
+# NWP v11 -- Hybrid LSTM + N-gram Federated Keyboard LM
+# Core runtime dependencies
+
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+httpx>=0.27.0
+pydantic>=2.7.0
+
+# Optional: LSTM engine (server runs in n-gram-only mode without this)
+torch>=2.1.0
+numpy>=1.26.0
+
+# Optional: development and testing
+# pytest
+# pytest-asyncio
