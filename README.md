@@ -25,15 +25,15 @@ Type in the browser UI and the server predicts your next word in real time. Over
 
 ```
 p2p-next-word-predictor/
-├── app/
+├── nwp_v12/                App package
 │   ├── __main__.py         Entry point (CLI flags: --host, --port, --data-dir)
-│   ├── requirements.txt    Runtime dependencies
 │   ├── Data/               Seed corpus and LSTM weights placeholder
 │   ├── FL/                 Federated learning — gossip engine, sync agent, training agent
 │   ├── Server/             FastAPI app, WebSocket hub, DB, peer discovery, model registry
 │   │   └── dl_module/      Prediction engines: LSTM, n-gram trie, cache, personalisation
 │   └── Frontend/           Browser UI (HTML + JS + CSS, no build step)
-├── docs/                   Architecture, API reference, configuration guide
+├── docs/                   Documentation
+├── notebook/               Training notebook
 ├── pyproject.toml
 └── .gitignore
 ```
@@ -46,9 +46,9 @@ p2p-next-word-predictor/
 
 ```bash
 # Clone and install
-git clone https://github.com/<your-username>/p2p-next-word-predictor.git
+git clone https://github.com/Dhanancheyan/p2p-next-word-predictor.git
 cd p2p-next-word-predictor
-pip install -r app/requirements.txt
+pip install -r requirements.txt
 
 # Start a single instance
 python -m nwp_v12 --port 8001
@@ -93,7 +93,7 @@ Each instance will auto-discover the others within 60 seconds by scanning localh
 | `--host` | `127.0.0.1` | Bind host |
 | `--port` | `8001` | Bind port — must be in range **8001–8020** |
 | `--data-dir` | `data/trainer` | Storage root for SQLite DB and model files |
-| `--static-dir` | `app/Frontend` | Path to UI assets |
+| `--static-dir` | `nwp_v12/Frontend` | Path to UI assets |
 
 ### Verifying FL is working
 
@@ -190,7 +190,7 @@ All settings are stored in the local SQLite database and editable through the we
 
 The server runs in n-gram-only mode by default. To enable the LSTM:
 
-1. Open `NWP_Training_Notebook.ipynb` in Google Colab or Jupyter
+1. Open `NWP_Training_Notebook.ipynb` in Google Colab or Jupyter (in the `notebook/` folder)
 2. Run all cells — exports `lstm_weights.json`
 3. In the app, go to **DL Tuning** tab → drag-and-drop the file, or via API:
 
@@ -273,30 +273,26 @@ python scripts/smoke_fl_round.py
 
 ## Docs
 
-Full documentation is in the [`docs/`](./docs/) folder:
+Detailed documentation is in the [`docs/`](./docs/) folder.
 
-- [Architecture](./docs/architecture.md) — prediction pipeline and system design
-- [Federated Learning](./docs/federated-learning.md) — gossip protocol, delta format, reputation system
-- [API Reference](./docs/api-reference.md) — all endpoints with request/response shapes
-- [Configuration](./docs/configuration.md) — all settings and CLI flags explained
-- [LSTM Weights](./docs/lstm-weights.md) — Colab training workflow and upload guide
+---
+
+## Citation
+
+If you use this project in your research, please cite it:
+
+```bibtex
+@software{dhanancheyan2026nwp,
+  author    = {Dhanancheyan},
+  title     = {P2P Next-Word Predictor},
+  year      = {2026},
+  publisher = {GitHub},
+  url       = {https://github.com/Dhanancheyan/p2p-next-word-predictor}
+}
+```
 
 ---
 
 ## License
 
 MIT License. See [LICENSE](./LICENSE) for details.
-
-## Citation
-
-If you use this project in your research, please cite it:
-
-\```bibtex
-@software{dhanancheyan2026nwp,
-  author    = {Dhanancheyan},
-  title     = {P2P Next-Word Predictor},
-  year      = {2026},
-  publisher = {GitHub},
-  url       = {https://github.com/<your-username>/p2p-next-word-predictor}
-}
-\```
